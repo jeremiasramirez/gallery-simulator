@@ -1,0 +1,45 @@
+body{
+margin: 0;
+padding:0;
+}
+img{
+	max-width: 300px;
+	max-height: 300px;
+ 
+
+}
+
+.overlay{
+	position: absolute;
+	background-color: #333;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+ 
+
+}
+.overlay img{
+	max-height: 100%;
+	max-width: 100%;
+	position: relative;
+	transform: scale(.9);
+  
+
+}
+.closes{
+	 font-size: 20px;
+	 font-family: sans-serif;
+	 color: white;
+	 
+	 
+}
+.imagenes{
+	display:  grid;
+	grid-gap: .5em;
+	grid-row: .5em;
+	overflow-y: scroll;
+	padding:1em;
+ }

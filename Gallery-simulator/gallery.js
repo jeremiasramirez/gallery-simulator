@@ -1,13 +1,14 @@
- let imagenes = ["Imagenes/inicio.jpg","Imagenes/contacto.jpg"]
 
 
 let over = document.getElementById("overlay")
-	let imgs = over.querySelector('img')
- 
+	let imgs = over.querySelectorAll('img')
 
-	
-	 over.addEventListener("click",function(e){
+
+	for(let i=0;i<imgs.length; i++){
+
+	 imgs[i].addEventListener("click",function(e){
 	  
+	 	console.log(window.scrollY)
 
 		 let closes= document.createElement("span")
 		 	 closes.setAttribute("class", "closes")
@@ -15,6 +16,7 @@ let over = document.getElementById("overlay")
 		let elementOver = document.createElement("div")
 			elementOver.setAttribute("class", "overlay")
 			elementOver.appendChild(closes)
+			elementOver.style.top=window.scrollY+'px';
 			let ims = document.createElement("img")
 				ims.src = e.target.src
 		
@@ -26,3 +28,5 @@ let over = document.getElementById("overlay")
 			document.body.insertBefore(elementOver,document.body.firstElementChild)
 			
 	},false)
+
+	}
